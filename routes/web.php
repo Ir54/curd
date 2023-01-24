@@ -17,5 +17,8 @@ use App\Http\Controllers\mycontroller;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::view('index', 'insertRead');
 Route::post('insertData', [mycontroller::class,"insert"]);
+Route::get('/', [mycontroller::class,'readdata']);
+//Route::view('update', 'updateview');
+Route::get('updatedelete', [mycontroller::class,'updateordelete']);
+Route::get('updatedata', [mycontroller::class,'update']);
